@@ -1,41 +1,10 @@
- clas Main{
-    funtion void main(){
+ class Main{
+    function void main() {
         var Fraction a,b,c;
         let a = Fraction.new(2,3);
         let b = Fraction.new(1,5);
         let c = a.plus(b);
         do c.print();
         return;
-
     }
- }
- class Fraction{
-
-    field int numerator, denominator;
-    constructor Fraction new(int x, int y){
-        let numerator = x;
-        let denominator = y;
-        do reduce(); // reduces the fraction
-        return this; //returns the base address of the new object
-    }
-
-    method int getNumerator(){
-        return numerator;
-    }
-    method int getDenominator(){
-        return denominator;
-    }
-
-    method Fraction plus(Fraction other)
-    //method to reduce the fraction
-    method void reduce(){
-        var int g;
-        let g= Fraction.gcd(numerator,denominator);
-        if (g>1) {let numerator =numerator/g; let denominator = demoniator/g;}
-        return;
-    }
-
-    method void dispose()
-    method void print()
-
  }
