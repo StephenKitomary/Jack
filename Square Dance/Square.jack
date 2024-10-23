@@ -79,7 +79,7 @@ class Square{
         return;
     }
     method void moveRight() {
-        if (x + size < 519) { 
+        if (x + size < 500) { 
             do Screen.setColor(false);
             do Screen.drawRectangle(x, y, x + 1, y + size);
             let x = x + 2;
