@@ -4,6 +4,7 @@ class Main{
         let game = SquareGame.new();
         do game.run();
         do game.dispose();
+        do Output.printString("You have quit the game!");
         return;
     }
 }
