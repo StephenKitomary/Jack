@@ -38,7 +38,7 @@
     method void dispose(){
         do Memory.deAlloc(this);
         return;
-    }
+    } 
     method void print(){
         do Output.printString("The answer is: ");
         do Output.printInt(numerator);

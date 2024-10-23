@@ -9,7 +9,6 @@ class List {
     method void print(){
         var List current;
         let current = this;
-
         while (~(current == null)) {
             do Output.printInt(current.getData());
             do Output.printChar(32);
