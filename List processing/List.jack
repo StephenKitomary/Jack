@@ -9,7 +9,7 @@ class List {
     method void print(){
         var List current;
         let current = this;
-        while (~(current == null)) {
+        while (~(current = null)) {
             do Output.printInt(current.getData());
             do Output.printChar(32);
             do current = current.getNext();
@@ -18,7 +18,7 @@ class List {
 
     }
     method void dispose(){
-        if (~(next == null)){
+        if (~(next = null)){
             do next.dispose();
         }
         do Memory.deAlloc(this);

@@ -1,9 +1,16 @@
 class Random {
     field int counter;
+    field int j;
 
     constructor Random new() {
         let counter = 0;
         return this;
+    }
+    function int mod10(int num) {
+        var int quotient, result;
+        let quotient = num / 10;
+        let result = num - (quotient * 10);
+        return result;
     }
 
     method int getUniqueDigit(Array digits, int size) {
@@ -20,26 +27,27 @@ class Random {
             do Output.printString("Press and hold any key to generate a digit, then release: ");
             
             
-            while (Keyboard.keyPressed() == 0) {
+            while (Keyboard.keyPressed() = 0) {
                 
             }
 
             
-            while (Keyboard.keyPressed() != 0) {
+            while (~(Keyboard.keyPressed()= 0)) {
                 let counter = counter + 1;  
             }
 
             
-            let digit = counter % 10;  
+            let digit = Random.mod10(counter); 
 
             
             let isUnique = true;
-            var int i = 0;
-            while (i < size) {
-                if (digits[i] == digit) {
+            let j= 0;
+
+            while (j < size) {
+                if (digits[j] = digit) {
                     let isUnique = false;  
                 }
-                let i = i + 1;
+                let j = j + 1;
             }
 
             

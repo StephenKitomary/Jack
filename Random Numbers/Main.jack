@@ -1,8 +1,9 @@
 class Main {
     function void main() {
+        var Random random;
         var Array digits;  
         var int numDigits, i, digit;
-        let numDigits = Keyboard.readInt("How many random digits do you want?");  // Read the number of digits
+        let numDigits = Keyboard.readInt("How many random digits do you want?");
 
         
         let digits = Array.new(numDigits);
@@ -10,7 +11,7 @@ class Main {
         
         let i = 0;
         while (i < numDigits) {
-            let digit = Random.getUniqueDigit(digits, i);  
+            let digit = random.getUniqueDigit(digits, i);  
             let digits[i] = digit;  
             let i = i + 1; 
         }
