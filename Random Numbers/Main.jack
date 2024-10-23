@@ -1,0 +1,31 @@
+class Main {
+    function void main() {
+        var Array digits;  
+        var int numDigits, i, digit;
+        let numDigits = Keyboard.readInt("How many random digits do you want?");  // Read the number of digits
+
+        
+        let digits = Array.new(numDigits);
+
+        
+        let i = 0;
+        while (i < numDigits) {
+            let digit = Random.getUniqueDigit(digits, i);  
+            let digits[i] = digit;  
+            let i = i + 1; 
+        }
+
+      
+        do Output.printString("Generated random number: ");
+        let i = 0;
+        while (i < numDigits) {
+            do Output.printInt(digits[i]);  
+            let i = i + 1;
+        }
+        do Output.println();  
+
+        
+        do digits.dispose();
+        return;
+    }
+}

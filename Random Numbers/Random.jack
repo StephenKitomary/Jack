@@ -1,0 +1,58 @@
+class Random {
+    field int counter;
+
+    constructor Random new() {
+        let counter = 0;
+        return this;
+    }
+
+    method int getUniqueDigit(Array digits, int size) {
+        var int digit;
+        var boolean isUnique;
+        var char key;
+        var int counter;
+        let isUnique = false;
+
+        while (~isUnique) {
+            let counter = 0;  
+
+            
+            do Output.printString("Press and hold any key to generate a digit, then release: ");
+            
+            
+            while (Keyboard.keyPressed() == 0) {
+                
+            }
+
+            
+            while (Keyboard.keyPressed() != 0) {
+                let counter = counter + 1;  
+            }
+
+            
+            let digit = counter % 10;  
+
+            
+            let isUnique = true;
+            var int i = 0;
+            while (i < size) {
+                if (digits[i] == digit) {
+                    let isUnique = false;  
+                }
+                let i = i + 1;
+            }
+
+            
+            if (~isUnique) {
+                do Output.printString("Duplicate digit! Press and hold any key again.\n");
+            }
+        }
+
+        return digit;  
+    }
+
+    method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+}
