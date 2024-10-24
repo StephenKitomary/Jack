@@ -1,4 +1,4 @@
-function Main.main 10
+function Main.main 9
     push constant 0
     pop local 7
     push constant 0
@@ -226,12 +226,59 @@ label Main_0
     not
     not
     if-goto Main_1
+    push constant 0
+    pop local 0
+    push constant 1
+    neg
+    pop local 8
+    push constant 18
+    call String.new 1
+    push constant 69
+    call String.appendChar 2
+    push constant 110
+    call String.appendChar 2
+    push constant 116
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 114
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 121
+    call String.appendChar 2
+    push constant 111
+    call String.appendChar 2
+    push constant 117
+    call String.appendChar 2
+    push constant 114
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 103
+    call String.appendChar 2
+    push constant 117
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 115
+    call String.appendChar 2
+    push constant 115
+    call String.appendChar 2
+    push constant 58
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    call Output.printString 1
+    pop temp 0
 label Main_2
     push local 0
     push constant 3
     lt
     not
     if-goto Main_3
+    call Keyboard.keyPressed 0
+    pop local 3
 label Main_4
     push local 3
     push constant 0
@@ -240,6 +287,8 @@ label Main_4
     if-goto Main_5
     call Keyboard.keyPressed 0
     pop local 3
+    goto Main_4
+label Main_5
     push local 0
     push local 5
     add
@@ -250,8 +299,6 @@ label Main_4
     pop pointer 1
     push temp 0
     pop that 0
-    goto Main_4
-label Main_5
 label Main_6
     push local 3
     push constant 0
@@ -306,8 +353,42 @@ label Main_3
     eq
     not
     if-goto Main_9
-    push constant 20
+    push constant 50
     call String.new 1
+    push constant 67
+    call String.appendChar 2
+    push constant 111
+    call String.appendChar 2
+    push constant 110
+    call String.appendChar 2
+    push constant 103
+    call String.appendChar 2
+    push constant 114
+    call String.appendChar 2
+    push constant 97
+    call String.appendChar 2
+    push constant 116
+    call String.appendChar 2
+    push constant 117
+    call String.appendChar 2
+    push constant 108
+    call String.appendChar 2
+    push constant 97
+    call String.appendChar 2
+    push constant 116
+    call String.appendChar 2
+    push constant 105
+    call String.appendChar 2
+    push constant 111
+    call String.appendChar 2
+    push constant 110
+    call String.appendChar 2
+    push constant 115
+    call String.appendChar 2
+    push constant 33
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
     push constant 89
     call String.appendChar 2
     push constant 111
@@ -326,6 +407,10 @@ label Main_3
     call String.appendChar 2
     push constant 115
     call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 100
+    call String.appendChar 2
     push constant 32
     call String.appendChar 2
     push constant 116
@@ -336,31 +421,47 @@ label Main_3
     call String.appendChar 2
     push constant 32
     call String.appendChar 2
-    push constant 97
-    call String.appendChar 2
     push constant 110
     call String.appendChar 2
-    push constant 115
+    push constant 117
     call String.appendChar 2
-    push constant 119
+    push constant 109
+    call String.appendChar 2
+    push constant 98
     call String.appendChar 2
     push constant 101
     call String.appendChar 2
     push constant 114
     call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 99
+    call String.appendChar 2
+    push constant 111
+    call String.appendChar 2
+    push constant 114
+    call String.appendChar 2
+    push constant 114
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 99
+    call String.appendChar 2
+    push constant 116
+    call String.appendChar 2
+    push constant 108
+    call String.appendChar 2
+    push constant 121
+    call String.appendChar 2
+    push constant 33
+    call String.appendChar 2
     call Output.printString 1
-    pop temp 0
-    call Output.println 0
     pop temp 0
     push constant 0
     return
     goto Main_8
 label Main_9
 label Main_8
-    push constant 0
-    pop local 9
-    push constant 0
-    pop local 8
     push constant 0
     pop local 2
 label Main_10
@@ -382,9 +483,23 @@ label Main_10
     eq
     not
     if-goto Main_13
-    push local 8
-    push constant 1
-    add
+    push constant 6
+    call String.new 1
+    push constant 70
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 114
+    call String.appendChar 2
+    push constant 109
+    call String.appendChar 2
+    push constant 105
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    call Output.printString 1
+    pop temp 0
+    push constant 0
     pop local 8
     goto Main_12
 label Main_13
@@ -414,12 +529,22 @@ label Main_14
     and
     not
     if-goto Main_17
-    push local 9
-    push constant 1
-    add
-    pop local 9
+    push constant 5
+    call String.new 1
+    push constant 80
+    call String.appendChar 2
+    push constant 105
+    call String.appendChar 2
+    push constant 99
+    call String.appendChar 2
+    push constant 111
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    call Output.printString 1
+    pop temp 0
     push constant 0
-    return
+    pop local 8
     goto Main_16
 label Main_17
 label Main_16
@@ -436,72 +561,30 @@ label Main_12
     pop local 2
     goto Main_10
 label Main_11
-    push constant 12
+    push local 8
+    not
+    if-goto Main_19
+    push constant 7
     call String.new 1
-    push constant 80
+    push constant 66
     call String.appendChar 2
-    push constant 105
+    push constant 97
     call String.appendChar 2
-    push constant 99
-    call String.appendChar 2
-    push constant 111
-    call String.appendChar 2
-    push constant 32
-    call String.appendChar 2
-    push constant 67
-    call String.appendChar 2
-    push constant 111
-    call String.appendChar 2
-    push constant 117
-    call String.appendChar 2
-    push constant 110
-    call String.appendChar 2
-    push constant 116
-    call String.appendChar 2
-    push constant 58
-    call String.appendChar 2
-    push constant 32
-    call String.appendChar 2
-    call Output.printString 1
-    pop temp 0
-    push local 9
-    call Output.printInt 1
-    pop temp 0
-    call Output.println 0
-    pop temp 0
-    push constant 13
-    call String.new 1
-    push constant 70
+    push constant 103
     call String.appendChar 2
     push constant 101
     call String.appendChar 2
-    push constant 114
+    push constant 108
     call String.appendChar 2
-    push constant 109
-    call String.appendChar 2
-    push constant 105
-    call String.appendChar 2
-    push constant 32
-    call String.appendChar 2
-    push constant 67
-    call String.appendChar 2
-    push constant 111
-    call String.appendChar 2
-    push constant 117
-    call String.appendChar 2
-    push constant 110
-    call String.appendChar 2
-    push constant 116
-    call String.appendChar 2
-    push constant 58
+    push constant 115
     call String.appendChar 2
     push constant 32
     call String.appendChar 2
     call Output.printString 1
     pop temp 0
-    push local 8
-    call Output.printInt 1
-    pop temp 0
+    goto Main_18
+label Main_19
+label Main_18
     call Output.println 0
     pop temp 0
     push local 7
@@ -512,13 +595,113 @@ label Main_11
     push constant 20
     eq
     not
-    if-goto Main_19
+    if-goto Main_21
+    push constant 48
+    call String.new 1
+    push constant 89
+    call String.appendChar 2
+    push constant 111
+    call String.appendChar 2
+    push constant 117
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 104
+    call String.appendChar 2
+    push constant 97
+    call String.appendChar 2
+    push constant 118
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 114
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 97
+    call String.appendChar 2
+    push constant 99
+    call String.appendChar 2
+    push constant 104
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 100
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 116
+    call String.appendChar 2
+    push constant 104
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 109
+    call String.appendChar 2
+    push constant 97
+    call String.appendChar 2
+    push constant 120
+    call String.appendChar 2
+    push constant 105
+    call String.appendChar 2
+    push constant 109
+    call String.appendChar 2
+    push constant 117
+    call String.appendChar 2
+    push constant 109
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 110
+    call String.appendChar 2
+    push constant 117
+    call String.appendChar 2
+    push constant 109
+    call String.appendChar 2
+    push constant 98
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 114
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 111
+    call String.appendChar 2
+    push constant 102
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 97
+    call String.appendChar 2
+    push constant 116
+    call String.appendChar 2
+    push constant 116
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 109
+    call String.appendChar 2
+    push constant 112
+    call String.appendChar 2
+    push constant 116
+    call String.appendChar 2
+    push constant 115
+    call String.appendChar 2
+    push constant 46
+    call String.appendChar 2
+    call Output.printString 1
+    pop temp 0
     push constant 1
     neg
     pop local 6
-    goto Main_18
-label Main_19
-label Main_18
+    goto Main_20
+label Main_21
+label Main_20
     goto Main_0
 label Main_1
     push constant 0
