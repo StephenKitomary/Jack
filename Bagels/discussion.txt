@@ -1,0 +1,23 @@
+// Bagels
+// Generate a secret number and assign the digits to secret1, secret2, secret3
+//         These will stay for the rest of the game
+
+// Request input of a three digit number, assign its digits to digit1, digit2, digit3
+//         These only stay for this one guess
+//         There are only 20 guesses allowed
+// Declare variables for the numbers of Picos and number of Fermis
+// Compare digit1 to secret1, compare digit2 to secret2, compare digit3 to secret3
+//         For each match, there is a Fermi for this guess
+//         If there are three Fermis, the guess is correct
+// Compare digit1 to secret2 or secret3, compare digit2 to secret1 or secret3,
+// compare digit3 to secret1 or secret2
+//         For each match, there is a Pico for this guess
+// If there are no Picos or Fermis, print Bagels
+// Print number of Picos, print number of Fermis
+
+// press any key and then release, the program counts how many while loops it takes to
+// release, that is the seed for a pseudorandom algorithm
+
+// while loop for guess
+
+// for now we hardcode the secret number, need the weekend to do the random assignment

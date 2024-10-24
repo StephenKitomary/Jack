@@ -1,0 +1,161 @@
+Main.jack
+
+/**
+ * Initialise a new NumberGuesser game and start it.
+ */
+class Main {
+
+	function void main() {
+    	var NumberGuesser game;
+
+    	let game = NumberGuesser.new();
+    	do game.run();
+    	do game.dispose();
+
+    	return;
+	}
+}
+
+NumberGuesser.jack
+
+class NumberGuesser {
+
+  field int high;
+  field int low;
+  field int guess;
+  field int lastGuess;
+
+  constructor NumberGuesser new() {
+	let high = 101;
+	let low = 1;
+	let guess = 50;
+	let lastGuess = 0;
+
+	return this;
+  }
+
+  method void dispose() {
+	do Memory.deAlloc(this);
+	return;
+  }
+
+  method void run() {
+	var char key;
+	var boolean exit;
+
+	let exit = false;
+    
+	while (~exit) {
+ 	 
+  	// Print guess
+  	do Output.printString("My guess is ");
+  	do Output.printInt(guess);
+  	do Output.printString(". Is this correct (=)?");
+  	do Output.println();
+  	do Output.printString("Or is your number higher (up) or lower (down)?");
+  	do Output.println();
+
+  	while (key = 0) {
+    		let key = Keyboard.keyPressed();
+  	}
+
+  	// Clear the screen and reposition the cursor
+  	do Screen.clearScreen();
+  	do Output.moveCursor(0,0);
+
+  	/* 61 is equals, 131 is up arrow, 133 is down arrow */
+  	if (key = 61) {
+    		do Output.printString("I guessed your number!");
+    		do Output.println();
+    		let exit = true;
+  	}
+  	if (key = 131) {
+    		do Output.printString("You say your number is higher!");
+    		do Output.println();
+    		let low = guess;
+  	}
+  	if (key = 133) {
+    		do Output.printString("You say your number is lower!");
+    		do Output.println();
+    		let high = guess;
+  	}
+
+  	// Wait for the key to be released
+  	while (~(key = 0)) {
+    		let key = Keyboard.keyPressed();
+  	}
+
+  	let lastGuess = guess;
+  	let guess = (high + low) / 2;
+
+  	if (guess = lastGuess) {
+    		do Output.printString("I think ");
+    		do Output.printInt(guess);
+    		do Output.printString(" is your number.");
+    		let exit = true;
+  	}
+}
+return;
+  }
+}
+
+   if (a[0] != b[0] and a[1] != b[1] and a[2] != b[2]){
+        do Output.printString("Bagels")
+        do Output.println();
+      }
+       if (a[0] = b[0] or a[1] != b[1] or a[2] != b[2]){
+        do Output.printString("Pico")
+        do Output.println();
+        }
+       elif (a[0] != b[0] or a[1] = b[1] or a[2] != b[2]){
+        do Output.printString("Pico")
+        do Output.println();
+        
+      }
+
+#-----#
+
+     let picoCount = 0;
+        let fermiCount = 0;
+
+        // Loop to compare values and indices
+k       let k = 0;
+        while (k < 3) {
+            if (a[k] = b[k]) {
+                let fermiCount = fermiCount + 1;  // Correct value and position
+            } else {
+                // Check for correct value in different position
+                let j = 0;
+                while (j < 3) {
+                    if ((k != j) & (a[k] = b[j])) {
+                        let picoCount = picoCount + 1;
+                        break;
+                    }
+                    let j = j + 1;
+                }
+            }
+            let k = k + 1;
+        }
+
+
+####################################### (some assistance)#######################
+ let i = 0;
+        while (i < 3) {
+            if (a[i] = b[i]) {
+                do Output.printString("Fermi ");
+               
+            }
+            let i = i + 1;
+        }
+#############################
+
+##################### example: secret number: 367
+Fermi // 348
+Fermi Fermi // 369
+Pico //431
+Pico Pico //573
+Pico Pico Pico // 736
+Fermi Pico  //378
+Fermi Pico Pico //376
+you won // 367
+Bagels //290
