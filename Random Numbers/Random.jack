@@ -8,8 +8,7 @@ class Random {
     }
     function int mod10(int num) {
         var int quotient, result;
-        let quotient = num / 10;
-        let result = num - (quotient * 10);
+        
         return result;
     }
 
